@@ -34,7 +34,7 @@
 
 # Samples can be loaded from the web, or locally by dragging and dropping them over the editor
 (chain 
-  (sample :drone-sample "https://lisp.trane.studio/trane-tracks/choir%20g%20maj.wav" 52)
+  (sample :drone-sample "https://lisp.trane.studio/tracks/choir%20g%20maj.wav" 52)
   (gain :drone-gain)
   :hello-verb
 )
