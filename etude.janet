@@ -1,6 +1,6 @@
 # Hello
 # This is a little tour of the main features of trane
-# Press Alt+Enter to start (⌘+Enter on Mac)
+# Press Alt+Enter to start (⌥+Enter on Mac)
 
 # You can create instruments (and effects) and chain them together
 (chain 
