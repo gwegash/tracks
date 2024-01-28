@@ -4,9 +4,10 @@
 
 # You can create instruments (and effects) and chain them together
 (chain 
-  (synth :hello-synth "triangle")
+  (synth :hello-synth "triangle") # Can be one of "triangle" "square" "sawtooth" "sine"
   (Dlay :hello-delay 0.7 0.4)
-  (biquad :hello-filter "highpass")
+  (biquad :hello-filter "highpass") # "lowpass" "highpass" "bandpass" "lowshelf" "highshelf" "peaking" "notch" "allpass"
+  (panner :hello-pan)
   (gain :hello-gain)
   (reverb :hello-verb "https://oramics.github.io/sampled/IR/EMT140-Plate/samples/emt_140_medium_5.wav") #ty Greg Hopkins
   :out
@@ -30,6 +31,7 @@
 #(live_loop :twinkle
 #  (def note (pick (chord (pick [:G5 :G6]) :maj9)))
 #  (play note :hello-synth :dur 0.1)
+#  (target :hello-pan :pan (rand -0.5 0.5) 0.5)
 #  (sleep (rand 2 8))
 #)
 
