@@ -48,5 +48,13 @@
   (sleep 5)
 )
 
+# You can wire together instruments that have already been declared
+# Here we set up a dry path for the synth
+#(chain
+#  :hello-gain
+#  (gain :synth-dry)
+#  :out
+#)
+
 # You can use (doc ...) whilst editing to find out more until I write better documentation
 #(doc Dlay)
