@@ -5,7 +5,7 @@
 # You can create instruments (and effects) and chain them together
 (chain 
   (synth :hello-synth "triangle") # Can be one of "triangle" "square" "sawtooth" "sine"
-  (Dlay :hello-delay 0.7 0.4)
+  (Dlay :hello-delay 0.75)
   (biquad :hello-filter "highpass") # "lowpass" "highpass" "bandpass" "lowshelf" "highshelf" "peaking" "notch" "allpass"
   (panner :hello-pan)
   (gain :hello-gain)
