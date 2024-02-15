@@ -44,7 +44,7 @@
 
 (live_loop :drones
   (change :drone-gain :gain 0.1)
-  (play (pick [40 52 52 64]) :drone-sample :dur 32)
+  (play (pick 40 52 52 64) :drone-sample :dur 32)
   (sleep 5)
 )
 
