@@ -29,7 +29,7 @@
 
 # Live loops have to sleep for some time, try uncommenting the code below
 #(live_loop :twinkle
-#  (def note (pick (chord (pick [:G5 :G6]) :maj9)))
+#  (def note (pick ;(chord (pick :G5 :G6) :maj9)))
 #  (play note :hello-synth :dur 0.1)
 #  (target :hello-pan :pan (rand -0.5 0.5) 0.5)
 #  (sleep (rand 2 8))
