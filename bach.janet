@@ -1,5 +1,5 @@
 (chain 
-  (sample :piano "local://148602__neatonk__piano_med_c5.wav" :C5)
+  (sample :piano "tracks/piano_c5.wav" :C5)
   (compressor :piano-comp)
   :out
 )
@@ -45,27 +45,6 @@
   ] 16))
   (each [n s] (P [0 1 2 3 4 2 3 4] 4)
     (play (+ (get chord n) (note :C4)) :piano :dur 8)
-    (sleep s)
-  )
-)
-
-(chain 
-  (breakbeat :gras "local://kidnplay [2024-01-30 112434].wav" 8 8)
-  (compressor :gras-comp)
-  (biquad :gras-filter "highpass")
-  (gain :gras-gain)
-  :out
-)
-
-(live_loop :jungles
-  (each [n s] (P [
-    [0 nil (pick 1 nil 2) 1 nil 1 nil (pick nil nil (rep 8 1))]
-    [1 nil 0 (pick 1 nil) nil 1 nil 3]
-    (pick (euclid 8 3) (euclid 8 5))
-    [0 nil [1 1] 1 nil 1 nil (rep 1 4)]
-  ] 16)
-    (play (+ 4 n) :gras :dur s)
-    (play (+ (pick 2 6 0) n) :gras :dur s)
     (sleep s)
   )
 )
