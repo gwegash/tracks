@@ -1,3 +1,5 @@
+(bpm 180)
+
 (chain 
   (breakbeat :gras "tracks/break.wav" 8 8)
   (compressor :gras-comp)

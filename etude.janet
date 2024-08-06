@@ -1,3 +1,4 @@
+(bpm 120)
 # Hello
 # This is a little tour of the main features of trane
 # Press Alt+Enter to start (⌥+Enter on Mac)

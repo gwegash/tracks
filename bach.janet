@@ -1,3 +1,5 @@
+(bpm 140)
+
 (chain 
   (sample :piano "tracks/piano_c5.wav" :C5)
   (compressor :piano-comp)

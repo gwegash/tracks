@@ -1,3 +1,5 @@
+(bpm 119)
+
 (chain 
   (sample :korgan "tracks/korgan_e3.wav" :E3 )
   (panner :pan-keys)
