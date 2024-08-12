@@ -1,3 +1,5 @@
+# A keyboard input example.
+# Make sure you click on or tab-focus the keyboard you want to play on
 (bpm 120)
 (chain 
   (keyboard :keys)
