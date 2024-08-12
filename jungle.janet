@@ -1,15 +1,15 @@
 (bpm 180)
 
 (chain 
-  (breakbeat :gras "tracks/break.wav" 8 8)
+  (breakbeat :gras :url "tracks/break.wav" :length_beats 8 :slices 8)
   (compressor :gras-comp)
-  (biquad :gras-filter "highpass")
+  (biquad :gras-filter :filter_type "highpass")
   (gain :gras-gain)
   :out
 )
 
 (chain
-  (synth :bass "sine")
+  (synth :bass :wave "sine")
   :out
 )
 
@@ -36,4 +36,3 @@
     (sleep s)
   )
 )
-

@@ -1,7 +1,7 @@
 (bpm 119)
 
 (chain 
-  (sample :korgan "tracks/korgan_e3.wav" :E3 )
+  (sample :korgan :url "tracks/korgan_e3.wav" :pitch :E3 )
   (panner :pan-keys)
   (scope :organ)
   :out
@@ -32,10 +32,12 @@
 
 (chain 
   (drums :lol 
-    "tracks/samples/909_bd.wav"
-    "tracks/samples/909_ch.wav"
-    "tracks/samples/909_clap.wav"
-    "tracks/samples/909_oh.wav"
+   :hits [
+      "tracks/samples/909_bd.wav"
+      "tracks/samples/909_ch.wav"
+      "tracks/samples/909_clap.wav"
+      "tracks/samples/909_oh.wav"
+    ]
   )
   (gain :drums-gain)
   (panner :pan-drums)

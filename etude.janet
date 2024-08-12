@@ -5,12 +5,12 @@
 
 # You can create instruments (and effects) and chain them together
 (chain 
-  (synth :hello-synth "triangle") # Can be one of "triangle" "square" "sawtooth" "sine"
-  (Dlay :hello-delay 0.75)
-  (biquad :hello-filter "highpass") # "lowpass" "highpass" "bandpass" "lowshelf" "highshelf" "peaking" "notch" "allpass"
+  (synth :hello-synth :wave "triangle") # Can be one of "triangle" "square" "sawtooth" "sine"
+  (Dlay :hello-delay :delay_time 0.75)
+  (biquad :hello-filter :filter_type "highpass") # "lowpass" "highpass" "bandpass" "lowshelf" "highshelf" "peaking" "notch" "allpass"
   (panner :hello-pan)
   (gain :hello-gain)
-  (reverb :hello-verb "https://oramics.github.io/sampled/IR/EMT140-Plate/samples/emt_140_medium_5.wav") #ty Greg Hopkins
+  (reverb :hello-verb :impulse "https://oramics.github.io/sampled/IR/EMT140-Plate/samples/emt_140_medium_5.wav") #ty Greg Hopkins
   :out
 )
 # Instruments want events sending to them, so you have to give them a name.
@@ -38,14 +38,14 @@
 
 # Samples can be loaded from the web, or locally by dragging and dropping them over the editor
 (chain 
-  (sample :drone-sample "https://lisp.trane.studio/tracks/choir%20g%20maj.wav" 52)
+  (sample :drone-sample :url "https://lisp.trane.studio/tracks/choir%20g%20maj.wav" :pitch :g4)
   (gain :drone-gain)
   :hello-verb
 )
 
 (live_loop :drones
   (change :drone-gain :gain 0.1)
-  (play (pick 40 52 52 64) :drone-sample :dur 32)
+  (play (pick :g3 :g4 :g4 :g5) :drone-sample :dur 32)
   (sleep 5)
 )
 
