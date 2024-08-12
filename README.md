@@ -1,6 +1,7 @@
 # Trane Examples
 
 * [bach, patterns, timeselecting](https://lisp.trane.studio/?t=tracks/bach.janet)
+* [keyboard input, breaks, samples](https://lisp.trane.studio/?t=tracks/keyboards.janet)
 * [breakbeats, patterns, instruments](https://lisp.trane.studio/?t=tracks/jungle.janet)
 * [drum patterns, instruments](https://lisp.trane.studio/?t=tracks/gypsy_woman.janet)
 * [language tour, study](https://lisp.trane.studio/?t=tracks/etude.janet)
