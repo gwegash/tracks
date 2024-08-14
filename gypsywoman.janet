@@ -1,19 +1,21 @@
+
+(bpm 119.5)
 (chain 
-  (sample :piano "local://Acoustic Piano - Piano 16 064L.wav" :E3 )
+  (sample :piano :url "local://Acoustic Piano - Piano 16 064L.wav" :pitch :E3 )
   (scope :keys)
   (panner :pan-organ)
   :out
 )
 #
 (chain 
-  (sample :korgan "local://Perc Organ - Organ 2 064L.wav" :E3 )
+  (sample :korgan :url "local://Perc Organ - Organ 2 064L.wav" :pitch :E3 )
   (panner :pan-keys)
   (scope :organ)
   :out
 )
 
 (live_loop :organ-player
-  (each [p s] (P [0 [0 nil nil 1] [nil nil 1 nil] [nil 1 nil nil]] 4)
+  (each [p s] (P [0 [0 :tie :tie 1] [:tie :tie 1 :tie] [:tie 1 :tie :tie]] 4)
     (def chordPairs [
       [[:A2 :G3 :C4 :E4] [:Bb2 :A3 :D4 :F4]]
       [[:G2 :G3 :Bb3 :D4 :F4] [:C3 :G3 :Bb3 :Cs4 :E4]]
@@ -57,16 +59,18 @@
 )
 
 (chain 
-  (breakbeat :bb "local://James Brown - Funky Drummer [2024-01-30 103836].wav" 4 4)
+  (breakbeat :bb :url "local://James Brown - Funky Drummer [2024-01-30 103836].wav" :length_beats 4 :slices 4)
   (scope :bbscopes)
   (panner :pan-bb)
   :out
 )
 
 (chain 
-  (drums :pella "local://verse.wav" "local://loop.wav" "local://ooh.wav")
+  (drums :pella :hits [
+    "tracks/samples/vocals/gypsy_woman/verse.wav" "tracks/samples/vocals/gypsy_woman/loop.wav" "tracks/samples/vocals/gypsy_woman/ooh.wav"]
+  )
   (gain :vocs-g)
-  (biquad :vocs-f "highshelf")
+  (biquad :vocs-f :filter_type "highshelf")
   (Dlay :dlay-vocs 1.5)
   (scope :claps)
   :out
@@ -80,7 +84,7 @@
 )
 
 (live_loop :vocals
-  (sleep (- 32 (mod (time) 32)))
+  (sleep (til 32))
   (sleep 0.55)
   (play 0 :pella :dur 55)
   (sleep 51.45)
@@ -98,7 +102,7 @@
 )
 
 (live_loop :ch
-  (each [p s] (P [1 [[1 nil] [nil nil 1]] [[1 nil 1] [nil nil]] 1] 4)
+  (each [p s] (P [1 [[1 :rest] [:rest :rest 1]] [[1 :rest 1] [:rest :rest]] 1] 4)
     (play p :lol :dur 2)
     (sleep s)
   )
