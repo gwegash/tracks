@@ -1,7 +1,7 @@
 (bpm 100)
 
 (chain 
-  (sample :s :url "local://Hedonics - RS INTL Sample Pack VIII- Eurorack Modular by Hedonics - 260 TIAKO24.flac" :pitch :gb3)
+  (sample :s :url "tracks/samples/hedonics/TIAKO24.flac" :pitch :gb3)
   (panner :s-pan)
   (reverb :s-verb :wet-dry 0.75)
   :out
@@ -16,22 +16,15 @@
   )
 )
 
-'(live_loop :s-player-2
-  (seed 12)
-  (for i 0 6
-    (play ((scale :c3 :major_pentatonic) (pick ;(range 3 10))) :s :dur 0.12)
-    (sleep (pick 0.75 1.5))
-  )
-)
 
-(chain 
-  (sample :s-pad :url "local://Breath (JW1).wav" :pitch 38.5 :attack 0.22 :release 0.22 :gain 0.25)
+'(chain 
+  (sample :s-pad :url "tracks/samples/hedonics/breath.wav" :pitch 38.5 :attack 0.22 :release 0.22 :gain 0.25)
   (biquad :s-pad-f :type "lowpass" :frequency 2500 :q 4.5)
   (panner :s-pad-pan)
   :out
 )
 
-(live_loop :pads
+'(live_loop :pads
   (sleep (til 16))
   (each [n s] (P [:c3 :d3] 16)
     (play n :s-pad :dur s)
@@ -39,22 +32,22 @@
   )
 )
 
-(live_loop :intros
+'(live_loop :intros
   (sleep 32)
   (lin :s-pad-pan :pan (rand -0.5 0.5)) 
   (exp :s-pad-f :frequency 1200)
 )
 
-(chain
+'(chain
   (keyboard :s-k)
   (drums :electro :hits [
-    "local://808BD2.flac"
-    "local://808BD3.flac"
-    "local://808CH1.flac"
-    "local://808CH2.flac"
-    "local://808CH3.flac"
-    "local://808SD4.flac"
-    "local://808SD5.flac"
+    "tracks/samples/hedonics/808BD2.flac"
+    "tracks/samples/hedonics/808BD3.flac"
+    "tracks/samples/hedonics/808CH1.flac"
+    "tracks/samples/hedonics/808CH2.flac"
+    "tracks/samples/hedonics/808CH3.flac"
+    "tracks/samples/hedonics/808SD4.flac"
+    "tracks/samples/hedonics/808SD5.flac"
   ])
   (gain :electro-gain :gain 0.75)
   :out
@@ -77,8 +70,8 @@
   )
 )
 
-(chain
-  (sample :bass-s :url "local://808BD7.flac" :pitch 27.9)
+'(chain
+  (sample :bass-s :url "tracks/samples/hedonics/808BD7.flac" :pitch 27.9)
   :out
 )
 
