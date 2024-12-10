@@ -49,7 +49,10 @@
     "tracks/samples/hedonics/808SD4.flac"
     "tracks/samples/hedonics/808SD5.flac"
   ])
-  (gain :electro-gain :gain 0.75)
+  (compressor :electro-conp :threshold -50.0 :ratio 17.0 :attack 0.01)
+  (biquad :b-f :type "lowpass" :frequency 4000)
+  (gain :electro-gain :gain 3.00)
+  (reverb :electro-verb :wet-dry 0.5)
   :out
 )
 
