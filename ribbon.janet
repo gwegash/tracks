@@ -2,7 +2,7 @@
 
 (chain 
   (breakbeat :funky :url "tracks/samples/breaks/helicopter.wav" :length_beats 8 :slices 16)
-  #(breakbeat :funky :url "tracks/samples/breaks/amen.wav :length_beats 16 :slices 16)
+  #(breakbeat :funky :url "tracks/samples/breaks/amen.wav" :length_beats 16 :slices 16)
   #(Dlay :funky-lay :delay_time 0.04)
   (panner :funky-pan)
   (scope :funky-s)
@@ -42,7 +42,7 @@
 )
 
 (chain 
-  (breakbeat :ridim :url "tracks/samples/loops/riddim_intro.wav" :length_beats 64 :slices 64) 
+  (breakbeat :ridim :url "tracks/samples/loops/ridim_intro.wav" :length_beats 64 :slices 64) 
   (biquad :butterfly-hi :filter_type "lowpass")
   (gain :ridim-gain :gain 2.0)
   (scope :butterfly-s)
