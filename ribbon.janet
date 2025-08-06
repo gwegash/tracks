@@ -12,7 +12,10 @@
 (chain 
   (keyboard :lol)
   (drums :sfx :hits [
-    "https://hl1sfx.com/play/scientist/c1a0_sci_crit1a.wav"
+    "tracks/samples/fx/hl/sci_dis.wav"
+    "tracks/samples/fx/hl/cantbeworse.wav"
+    "tracks/samples/fx/hl/scream2.wav"
+    "tracks/samples/fx/hl/tunedtoday.wav"
   ])
   :out
 )
