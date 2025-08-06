@@ -92,7 +92,7 @@
 )
 
 (chain 
-  (sample :drone :url "tracks/instruments/dronemachine1.wav" :pitch :c2 :gain 0.2 :attack 1.0 :release 1.0 :loop_start 0.01 :loop_end 0.99)
+  (sample :drone :url "tracks/samples/instruments/dronemachine1.wav" :pitch :c2 :gain 0.2 :attack 1.0 :release 1.0 :loop_start 0.01 :loop_end 0.99)
   (Dlay :drone-lay :delay_time 0.75)
   (reverb :drone-verb :decay-time 2.00)
   :out
