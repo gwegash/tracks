@@ -112,7 +112,7 @@
 )
 
 (chain
-  (breakbeat :hi :url "tracks/samples/loops/shader.wav" :length_beats 8 :slices 2)
+  (breakbeat :hi :url "tracks/samples/loops/shaker.wav" :length_beats 8 :slices 2)
   :out
 )
 
