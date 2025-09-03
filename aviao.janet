@@ -1,5 +1,17 @@
-(bpm 170)
+(bpm 185)
 
+(chain 
+  (line_in :aa)
+  
+  (gain :cutout)
+  (looper :hi-loop :loop_time 168)
+  (gain :aaa-g :gain 45.0)
+  (scope :aaa-s)
+  (compressor :comp-e)
+  (reverb :lol-verb :decay_time 5.0 :wet-dry 0.4)
+  (gain :post-comp :gain 2.0)
+  :out
+)
 (chain 
   (sample :piano :url "https://raw.githubusercontent.com/tidalcycles/dirt-samples/main/crow/000_crow.wav" :pitch :d5)
   (reverb :aaa)
@@ -117,13 +129,14 @@
 )
 
 (chain 
-  (sample :clave :url "tracks/samples/instruments/fx_drum/clave.flac" :pitch :c3)
+  (sample :clave :url "tracks/samples/instruments/fx_drum/rim.flac" :pitch :c3)
   (gain :ge :gain 5.0)
   :out
 )
 ( def clave [:c3 :tie :tie :c3 :tie :tie :c3 :tie :tie :tie :c3 :tie :c3 :tie :tie :rest])
 
 (live_loop :clave
+  (pp (- 168 (mod (time) 168)))
   (sleep (til 8))
   (each [n s] (P (pick clave clave (reverse clave)) 8)
     (play n :clave :dur 2)
