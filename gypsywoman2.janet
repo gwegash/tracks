@@ -72,7 +72,7 @@
   (breakbeat :pella "local://Crystal Waters - Gypsy Woman (She's Homeless) [Acapella] (256).mp3" 325 325)
   (biquad :vocs-f "highshelf")
   (scope :claps)
-  #(Dlay :vocs-d 0.25)
+  #(delay :vocs-d 0.25)
   :out
 )
 

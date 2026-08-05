@@ -1,6 +1,6 @@
 (chain 
   (synth :hi)
-  (Dlay :delay :delay_time 1.50)
+  (delay :delay :delay_time 1.50)
   (reverb :verb :decay_time 3.0)
   (compressor :comp)
   (biquad :filter :filter_type "peaking")
@@ -21,7 +21,7 @@
 ##
 (chain 
   (synth :hi-2 :wave "square")
-  (Dlay :hi-2-lay :delay_time 0.75)
+  (delay :hi-2-lay :delay_time 0.75)
   (scope :hi-2-s)
   (reverb :hi-2_ 3.0)
   :out

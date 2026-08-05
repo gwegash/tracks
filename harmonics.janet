@@ -7,7 +7,7 @@
   (scope :s)
   (panner :pan)
   (reverb :s-verb :decay-time 2.0)
-  (Dlay :s-lay :delay_time .75)
+  (delay :s-lay :delay_time .75)
   :out
 )
 

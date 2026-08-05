@@ -4,7 +4,7 @@
   (breakbeat :amen :url "tracks/samples/breaks/amen.wav" :length_beats 16 :slices 16 :gain 4.0)
   (distortion :amen-stort :amount 20)
   (biquad :amen-filter :filter_type "bandpass" :frequency 3000 :Q 0.18)
-  #(Dlay :funky-lay :delay_time 0.04)
+  #(delay :funky-lay :delay_time 0.04)
   (panner :funky-pan)
   (scope :funky-s)
   (gain :drum-gain)

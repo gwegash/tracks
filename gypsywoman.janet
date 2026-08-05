@@ -71,7 +71,7 @@
   )
   (gain :vocs-g)
   (biquad :vocs-f :filter_type "highshelf")
-  (Dlay :dlay-vocs 1.5)
+  (delay :dlay-vocs 1.5)
   (scope :claps)
   :out
 )

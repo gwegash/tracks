@@ -68,7 +68,7 @@
   (drums :pella "local://verse.wav" "local://loop.wav" "local://ooh.wav")
   (gain :vocs-g)
   (biquad :vocs-f "highshelf")
-  (Dlay :dlay-vocs 1.5)
+  (delay :dlay-vocs 1.5)
   (scope :claps)
   :out
 )

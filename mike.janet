@@ -5,7 +5,7 @@
   #(breakbeat :help :url "tracks/samples/loops/cant_help_it_2.flac" :length_beats 16 :slices 64)
   #(breakbeat :help :url "tracks/samples/loops/cant_help_it_verse.flac" :length_beats 32 :slices 4)
   (biquad :help-low :filter_type "peaking" :frequency 120 :Q 0.5 :gain 10)
-  (Dlay :hi-lay :delay_time 0.01)
+  (delay :hi-lay :delay_time 0.01)
   :out
 )
 

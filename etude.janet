@@ -6,7 +6,7 @@
 # You can create instruments (and effects) and chain them together
 (chain 
   (synth :hello-synth :wave "triangle") # Can be one of "triangle" "square" "sawtooth" "sine"
-  (Dlay :hello-delay :delay_time 0.75)
+  (delay :hello-delay :delay_time 0.75)
   (biquad :hello-filter :filter_type "highpass") # "lowpass" "highpass" "bandpass" "lowshelf" "highshelf" "peaking" "notch" "allpass"
   (panner :hello-pan)
   (gain :hello-gain)
@@ -58,4 +58,4 @@
 #)
 
 # You can use (doc ...) whilst editing to find out more until I write better documentation
-#(doc Dlay)
+#(doc delay)

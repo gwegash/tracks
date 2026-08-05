@@ -48,7 +48,7 @@
 (chain 
   (sample :voc :url "tracks/samples/vocals/brownstone_short_2.wav" :pitch :c2)
   (gain :voc-g)
-  (Dlay :aa :delay_time 1.5)
+  (delay :aa :delay_time 1.5)
   :out
 )
 

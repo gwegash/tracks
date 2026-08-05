@@ -3,7 +3,7 @@
 (chain 
   (breakbeat :funky :url "tracks/samples/breaks/helicopter.wav" :length_beats 8 :slices 16)
   #(breakbeat :funky :url "tracks/samples/breaks/amen.wav" :length_beats 16 :slices 16)
-  #(Dlay :funky-lay :delay_time 0.04)
+  #(delay :funky-lay :delay_time 0.04)
   (panner :funky-pan)
   (scope :funky-s)
   :out

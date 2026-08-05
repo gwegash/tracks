@@ -2,7 +2,7 @@
   (line_in :hello)
   (gain :ge)
   (scope :hi-s)
-  (Dlay :hi-lay :delay_time 0.04)
+  (delay :hi-lay :delay_time 0.04)
   (biquad :lol :filter_type "peaking")
   (reverb :hello-verb)
   (gain :post-g)
@@ -21,7 +21,7 @@
     "tracks/samples/instruments/kalimba/7.flac"
   ])
   (reverb :kalima-verb)
-  (Dlay :kalima-lay)
+  (delay :kalima-lay)
   :out
 )
 
@@ -72,7 +72,7 @@
     ]
   )
   (gain :drum-gain)
-  (Dlay :delay :delay_time 0.75)
+  (delay :delay :delay_time 0.75)
   (reverb :drum-verb :decay-time 0.75)
   :out
 )
@@ -93,7 +93,7 @@
 
 (chain 
   (sample :drone :url "tracks/samples/instruments/dronemachine1.wav" :pitch :c2 :gain 0.2 :attack 1.0 :release 1.0 :loop_start 0.01 :loop_end 0.99)
-  (Dlay :drone-lay :delay_time 0.75)
+  (delay :drone-lay :delay_time 0.75)
   (reverb :drone-verb :decay-time 2.00)
   :out
 )
