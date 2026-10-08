@@ -14,7 +14,7 @@
   :out
 )
 
-(live_loop :break_player
+'(live_loop :break_player
   (sleep (til 16))
   (each [n s] (P [
     (pick 0 (uclid (pick 2 0) 3 8))
@@ -31,11 +31,12 @@
 )
 
 (chain 
-  #(breakbeat :butterfly :url "tracks/samples/loops/intimate_friends.wav" :length_beats 16 :slices 4)
-  #(breakbeat :butterfly :url "tracks/samples/loops/misdemeanor.wav" :length_beats 16 :slices 4)
-  (breakbeat :butterfly :url "tracks/samples/loops/butterfly.wav" :length_beats 16 :slices 4)
-  (biquad :butterfly-hi :filter_type "lowpass")
+  #(breakbeat :butterfly :url "tracks/samples/loops/intimate_friends.wav" :length_beats 16 :slices 4 :gain 3.0)
+  #(breakbeat :butterfly :url "tracks/samples/loops/misdemeanor.wav" :length_beats 16 :slices 4 :gain 1.5)
+  (breakbeat :butterfly :url "tracks/samples/loops/butterfly.wav" :length_beats 16 :slices 4 :transpose -0.2 :gain 1.5)
+  (biquad :butterfly-hi :filter_type "lowpass" :frequency 10)
   (scope :butterfly-s)
+  (reverb :butterfly-verb)
   :out
 )
 
@@ -52,35 +53,21 @@
   :out
 )
 
-'(live_loop :voc_player
-  (play :d2 :voc :dur 8)
-  (sleep 8)
-)
-
-'(chain 
-  (breakbeat :misde :url "tracks/samples/loops/misdemeanor.wav" :length_beats 16 :slices 4)
-  (biquad :misde-hi :filter_type "lowpass")
-  :out
-)
-
-'(live_loop :mide_player
-  (play 0 :misde :dur 16)
-  (sleep 16)
-)
-
 (chain 
+  (keyboard :bassboard)
+  
   (synth :bass :wave "sine" :release 0.07)
   (scope :bass-s)
   :out
 )
 
-(live_loop :bass
+'(live_loop :bass
   (sleep (til 16))
   (each [n s] (P [
       [[:cs1 :tie :tie :cs1 :tie :tie :d1 :tie] :tie]
       [[:b0 :tie :tie :b0 :tie :tie :cs1 :tie] (pick :tie :tie [:tie :tie :cs2 :cs1])]
     ] 16)
-    (play n :bass :dur (* s 0.6))
+    (play (+ 24 n) :bass :dur (* s 0.6))
     (sleep s)
   )
 )

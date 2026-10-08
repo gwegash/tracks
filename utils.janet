@@ -117,3 +117,31 @@
   ~(live_loop (unique-loop-name ,instName :sweep)
      (sleep ,over)
      (lin ,instName ,param (timesel ,between ,over))))
+
+(defn hedonics [name]
+  (drums name :hits [
+    "tracks/samples/hedonics/808BD2.flac"
+    "tracks/samples/hedonics/808BD3.flac"
+    "tracks/samples/hedonics/808BD7.flac"
+    "tracks/samples/hedonics/808CH1.flac"
+    "tracks/samples/hedonics/808CH2.flac"
+    "tracks/samples/hedonics/808CH3.flac"
+    "tracks/samples/hedonics/808SD4.flac"
+    "tracks/samples/hedonics/808SD5.flac"
+    "tracks/samples/hedonics/TIAKO24.flac"
+    "tracks/samples/hedonics/TIAKO25.flac"
+    "tracks/samples/hedonics/TIAKO26.flac"]
+       )
+)
+
+(defn non [name]
+  (drums name :hits [
+    "tracks/samples/909_bd.wav"
+    "tracks/samples/909_ch.wav"
+    "tracks/samples/909_clap.wav"
+    "tracks/samples/909_cr.wav"
+    "tracks/samples/909_oh.wav"
+    "tracks/samples/909_rim.wav"
+    "tracks/samples/909_sn.wav"
+    ])
+)
