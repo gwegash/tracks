@@ -9,4 +9,5 @@
 * [breakbeats, patterns, instruments](https://lisp.trane.studio/?t=tracks/jungle.janet)
 * [drum patterns, instruments](https://lisp.trane.studio/?t=tracks/gypsy_woman.janet)
 * [language tour, study](https://lisp.trane.studio/?t=tracks/etude.janet)
+* [acid, breaks, gates](https://lisp.trane.studio/?t=tracks/303-improved.janet)
 * [tutor](https://lisp.trane.studio/?tutor)
