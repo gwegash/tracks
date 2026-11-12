@@ -25,7 +25,7 @@
 #  (seed 100)
   (for i 0 24
     (play (pick :d3 :d2 :d2 :d2 :eb3 :d4) :teeb :dur (pick 0.1 0.1 0.1 -0.1))
-    (change :teeb :envMod (+ 0.01 (pick 0.01 0.01 0.01 0.05)) 0.01)
+    (change :teeb :envMod (+ 0.01 (pick 0.01 0.01 0.01 0.05)))
     (sleep 0.25)
   )
 )
@@ -70,7 +70,7 @@
 )
 
 (chain 
-  (breakbeat :amen :url "tracks/samples/breaks/amen.wav" :slices 8 :length_beats 16 :transpose 2 :gain 0.1)
+  (breakbeat :amen :url "tracks/samples/breaks/amen.wav" :slices 8 :length_beats 16 :transpose 2 :gain 0.2371)
   :warrior-comp
 )
 
